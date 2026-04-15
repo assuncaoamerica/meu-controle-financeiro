@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do círculo</title>
+</head>
+<body>
+    <script>
+//solicitar ao usuário o raio do círculo
+
+let raio = prompt('Insira o raio do círculo: ');
+
+//converter o raio de string para número
+
+raio=parseFloat(raio);
+
+//calcular área
+
+const area=Math.PI*Math.pow(raio,2);
+//exibir o resultado na tela
+
+//console.log('A área do círculo é:', area);
+
+alert("A área do círculo é: "+area.toEixed(2))
+
+</script>
+</body>
+</html>
