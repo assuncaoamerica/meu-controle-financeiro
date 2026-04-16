@@ -50,9 +50,14 @@ form.addEventListener("submit", function(e) {
             const li = document.createElement("li");
 
             li.innerHTML = `
-            ${t.descricao} - R$ ${t.valor}
+            ${t. descricao} - R$ ${t.valor}
+            <div>
+            <button onclick="editar(${index})">✏️</button>
             <button onclick="remover(${index})">X</button>
+            </div>
             `;
+
+  
 
             li.classList.add(t.tipo);
 
@@ -101,6 +106,24 @@ form.addEventListener("submit", function(e) {
         transacoes.splice(index, 1);
         atualizarTela();
     }
+
+    window.editar = function(index) {
+    const t = transacoes[index];
+
+    const novaDescricao = prompt("Editar descrição:", t.descricao);
+    const novoValor = prompt("Editar valor:", t.valor);
+
+    if (novaDescricao !== null && novoValor !== null) {
+        transacoes[index] = {
+            ...t,
+            descricao: novaDescricao,
+            valor: Number(novoValor)
+        };
+
+        localStorage.setItem("transacoes", JSON.stringify(transacoes));
+        atualizarTela();
+    }
+}
 
     atualizarTela();
 
