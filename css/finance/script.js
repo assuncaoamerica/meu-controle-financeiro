@@ -1,3 +1,5 @@
+let editandoIndex = null;
+
 const filtro = document.getElementById("filtro");
 
 let grafico;
@@ -110,19 +112,11 @@ form.addEventListener("submit", function(e) {
     window.editar = function(index) {
     const t = transacoes[index];
 
-    const novaDescricao = prompt("Editar descrição:", t.descricao);
-    const novoValor = prompt("Editar valor:", t.valor);
+    descricao.value = t.descricao;
+    valor.value = t.valor;
+    tipo.value = t.tipo;
 
-    if (novaDescricao !== null && novoValor !== null) {
-        transacoes[index] = {
-            ...t,
-            descricao: novaDescricao,
-            valor: Number(novoValor)
-        };
-
-        localStorage.setItem("transacoes", JSON.stringify(transacoes));
-        atualizarTela();
-    }
+    editandoIndex = index;
 }
 
     atualizarTela();

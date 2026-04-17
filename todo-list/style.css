@@ -1,0 +1,130 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* CONTAINER */
+.container {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    width: 350px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* TÍTULO */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* FORM */
+form {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+/* BOTÕES */
+button {
+    background: linear-gradient(135deg, #4CAF50, #2e7d32);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* LISTA */
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+li {
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    transition: 0.3s;
+}
+
+li:hover {
+    transform: scale(1.02);
+}
+
+/* CONCLUÍDA */
+.concluida {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+/* FILTROS */
+.filtros {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 500px) {
+    .container {
+        width: 90%;
+    }
+}
+
+/* DARK MODE */
+body.dark {
+    background: linear-gradient(135deg, #1e1e1e, #121212);
+}
+
+body.dark .container {
+    background: #1e1e1e;
+    color: white;
+}
+
+body.dark li {
+    background: #2a2a2a;
+}
+
+body.dark input {
+    background: #333;
+    color: white;
+    border: none;
+}
+
+body.dark button {
+    background: #444;
+}
+
+/* BOTÃO MODO */
+#modo {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: #333;
+    color: white;
+}
