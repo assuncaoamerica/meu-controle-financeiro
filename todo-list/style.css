@@ -1,12 +1,18 @@
+:root {
+    color-scheme: light;
+}
+
 body {
     font-family: 'Segoe UI', sans-serif;
     background: linear-gradient(135deg, #667eea, #764ba2);
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 40px;
+    color: #333;
 }
-
 /* CONTAINER */
 .container {
     background: white;
@@ -14,6 +20,7 @@ body {
     border-radius: 20px;
     width: 350px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    color: #333;
 }
 
 /* TÍTULO */
@@ -33,11 +40,13 @@ input {
     padding: 10px;
     border-radius: 10px;
     border: 1px solid #ddd;
+    background: white;
+    color: #333;
 }
 
 /* BOTÕES */
 button {
-    background: linear-gradient(135deg, #4CAF50, #2e7d32);
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
     color: white;
     border: none;
     padding: 10px;
@@ -128,3 +137,8 @@ body.dark button {
     background: #333;
     color: white;
 }
+
+html {
+    background: #667eea;
+}
+
