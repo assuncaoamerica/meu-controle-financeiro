@@ -142,3 +142,22 @@ html {
     background: #667eea;
 }
 
+/* FORÇAR MODO CLARO CORRETO */
+body:not(.dark) .container {
+    background: white;
+    color: #333;
+}
+
+body:not(.dark) input {
+    background: white;
+    color: #333;
+}
+
+body:not(.dark) li {
+    background: white;
+    color: #333;
+}
+
+body:not(.dark) button {
+    color: white;
+}
